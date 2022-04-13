@@ -2,7 +2,7 @@
 
 # OPENCLASSROOMS PROJECT 13 - Use an API for a bank user account with React
 
-!Remede-agency(https://user.oc-static.com/upload/2020/08/14/15974097192929_image1.png)
+![Remede-agency](https://user.oc-static.com/upload/2020/08/14/15974097192929_image1.png)
 
 ## Prerequisite
 * [Node.js](https://nodejs.org/en/) (version 12.18) for use npm
