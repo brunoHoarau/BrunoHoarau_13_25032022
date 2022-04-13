@@ -60,6 +60,15 @@
   color: #fff;
 }
 
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.buttons :first-child {
+  margin: auto 10px;
+}
+
 @media (min-width: 720px) {
   .account {
     flex-direction: row;

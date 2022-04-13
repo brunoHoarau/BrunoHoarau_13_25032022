@@ -20,9 +20,8 @@ class Hero extends Component {
 					<p className="text">{text}</p>
 				</section>
 			</div>
-					)
-}
-
+		)
+	}
 }
 
 export default Hero

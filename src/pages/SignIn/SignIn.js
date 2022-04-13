@@ -1,5 +1,5 @@
 import { Component } from "react";
-import SignInConnect from "../../components/SignInConnect/SignInConnect";
+import SignInConnect from "../../components/SignInForm/SignInForm";
 
 class SignIn extends Component {
 	render(){

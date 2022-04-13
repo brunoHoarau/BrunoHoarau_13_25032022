@@ -10,13 +10,8 @@ class Home extends Component {
 				<Hero />
 				<section className="features">
 					<h2 className="sr-only">Features</h2>
-					{
-						featuresItem.map( ({title, text, img}, key) =>{ 
-						return(<Features key={key} title={title} text={text} img={img}/>)
-						})
-					}
+					<Features />
 				</section>
-				
 			</main>
 		)
 	}

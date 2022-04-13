@@ -27,7 +27,13 @@
   padding: 5px 20px;
 }
 
+.main-nav > div {
+  display: flex;
+}
+
 .main-nav a {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   color: #2c3e50;
 }

@@ -12,7 +12,8 @@ const featuresItem = [
 		title: "More savings means higher rates",
 		text: "The more you save with us, the higher your interest rate will be!",
 		img: iconMoney
-	},{
+	},
+	{
 		title: "Security you can trust",
 		text: "We use top of the line encryption to make sure your data and money is always safe.",
 		img: iconSecurity
