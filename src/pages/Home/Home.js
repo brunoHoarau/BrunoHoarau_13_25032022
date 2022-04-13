@@ -1,5 +1,4 @@
 import { Component  } from "react";
-import featuresItem from "../../Datas/Features";
 import Features from "../../components/Features/Features";
 import Hero from "../../components/Hero/Hero";
 

@@ -1,6 +1,6 @@
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import './UserAccount.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AccountsCard from '../AccountCard/AccontCard'
 import { saveEdit_Action, edit_Action } from "../../actions/actions";
 
@@ -25,30 +25,29 @@ const UserAccount = () => {
 	
 		return(
 			<>
-			{ 
-				!editUserState ? 
-				<div className="header">
-      	  <h1>Welcome back<br />{fullName}</h1>
-      	  <button className="edit-button" onClick={ ()=>{ handleClickEdit()} }>Edit Name</button>
-      	</div>
-				 : 
-				<div className="header">
-				 	<h1>Welcome back<br />
-				 		<form id="myform" onSubmit={ (e)=>{ console.log(e.target)}}>
-						 	<input id="firstName"  placeholder={firstname} onChange= { e => setFirstNameValue(e.target.value) } /> <input id="lastName" placeholder={lastname} onChange= { e => setLastNameValue(e.target.value)} />
-				 		</form>
-					</h1>
-					<div className="buttons">
-				 		<button className="edit-button" onClick={ ()=>{ handleClickSaveEdit()} }>Save</button>
-				 		<button className="edit-button" onClick={ ()=>{ handleClickEdit()} }>Cancel</button>
-					</div>
-		  	</div>
-			}
-			<h2 className="sr-only">Accounts</h2>
-			<AccountsCard />
-		</>
+				{ 
+					!editUserState ? 
+					<div className="header">
+      		  <h1>Welcome back<br />{fullName}</h1>
+      		  <button className="edit-button" onClick={ ()=>{ handleClickEdit()} }>Edit Name</button>
+      		</div>
+					 : 
+					<div className="header">
+					 	<h1>Welcome back<br />
+					 		<form id="myform" onSubmit={ (e)=>{ console.log(e.target)}}>
+							 	<input id="firstName"  placeholder={firstname} onChange= { e => setFirstNameValue(e.target.value) } /> <input id="lastName" placeholder={lastname} onChange= { e => setLastNameValue(e.target.value)} />
+					 		</form>
+						</h1>
+						<div className="buttons">
+					 		<button className="edit-button" onClick={ ()=>{ handleClickSaveEdit()} }>Save</button>
+					 		<button className="edit-button" onClick={ ()=>{ handleClickEdit()} }>Cancel</button>
+						</div>
+		  		</div>
+				}
+				<h2 className="sr-only">Accounts</h2>
+				<AccountsCard />
+			</>
 		)
-	
 }
 
 

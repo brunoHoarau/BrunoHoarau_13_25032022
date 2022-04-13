@@ -23,7 +23,7 @@
 
 ### 2.1 Installation
 * Clone this repository on your computer `git clone https://github.com/brunoHoarau/BrunoHoarau_13_25032022.git`
-* Go to the project folder `cd BrunoHoarau_13_25032022`
+* Go to the project folder `cd BrunoHoarau_13_25032022/remede-agency`
 * Install all dependencies of you need for run this project with command `npm install`
 
 ### 2.2 Run the project

@@ -1,7 +1,7 @@
-import { combineReducers, createStore } from 'redux'
+import { createStore } from 'redux'
 import produce from "immer"
 
-export const initState = {
+const initState = {
 	isAuth: false,
 	firstname: null,
 	lastname: null,

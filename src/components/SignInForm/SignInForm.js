@@ -2,7 +2,6 @@ import FetchData from "../../service/FetchData";
 import "./SignInForm.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
-import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +10,6 @@ import { Auth_Login } from "../../actions/actions";
 const SignInConnect = () => {
 
   const [errMessage, setErrorMessage] = useState(false)
-  const isAuth = useSelector(state => state.isAuth)
   const dispatch = useDispatch()
   const history = useNavigate()
   const messError = `Please enter a valid email and/or password`
