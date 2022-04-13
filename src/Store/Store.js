@@ -1,13 +1,12 @@
-import { createStore } from 'redux'
+import { combineReducers, createStore } from 'redux'
 import produce from "immer"
 
-const initState = {
+export const initState = {
 	isAuth: false,
 	firstname: null,
 	lastname: null,
 	editUser: false
 }
-
 
 const reducer = (state = initState, action) => {
 	if( action.type === "AuthSuccess"){

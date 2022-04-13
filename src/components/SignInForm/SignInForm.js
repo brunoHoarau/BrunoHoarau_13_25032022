@@ -4,38 +4,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Auth_Login } from "../../actions/actions";
 
 const SignInConnect = () => {
 
   const [errMessage, setErrorMessage] = useState(false)
   const isAuth = useSelector(state => state.isAuth)
   const dispatch = useDispatch()
-  const AuthAction = (payload, dataUser) => ({ type: "AuthSuccess", payload: payload, dataUser: dataUser})
   const history = useNavigate()
-
-  useEffect( () => { 
-    if(isAuth){history('/profile')}
-  })
-  
   const messError = `Please enter a valid email and/or password`
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payloadConnexion = {email: e.target.username.value,
     password: e.target.password.value};
-
     try{
       const data = await new FetchData().getUserLogin(payloadConnexion);
       const getDataUser = await new FetchData().getUserProfil(data)
-      dispatch( AuthAction(data, getDataUser))
+      dispatch( Auth_Login(data, getDataUser))
       history("/profile")
     }catch (err) { console.log("Erreur :" + err); 
-    const elmt = e.target;
-    const elmtLast = e.target.lastChild;
-    setErrorMessage(true)
+      setErrorMessage(true)
    }
   }
 

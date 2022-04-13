@@ -2,8 +2,7 @@ import { useDispatch, useSelector, useStore } from "react-redux";
 import './UserAccount.css'
 import { useEffect, useState } from "react";
 import AccountsCard from '../AccountCard/AccontCard'
-
-
+import { saveEdit_Action, edit_Action } from "../../actions/actions";
 
 const UserAccount = () => {
 	const [firstNameValue, setFirstNameValue ] = useState('');
@@ -13,17 +12,15 @@ const UserAccount = () => {
 	const lastname = useSelector( state => state.lastname )
 	const editUserState = useSelector( state => state.editUser)
 
-	const editAction = () => ({type: "EditActivate"})
-	const saveEditAction = (payload) => ({type: "SaveEdit", payload: payload})
 	const dispatch = useDispatch()	
 	const fullName =  firstname +" "+ lastname 
 								
 	const handleClickEdit = () => {
-		dispatch( editAction())
+		dispatch( edit_Action())
 		}
 
 	const handleClickSaveEdit = () => {
-		dispatch( saveEditAction({firstNameValue, lastNameValue}))
+		dispatch( saveEdit_Action({firstNameValue, lastNameValue}))
 	}
 	
 		return(

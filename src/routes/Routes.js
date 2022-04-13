@@ -16,8 +16,7 @@ import { useSelector } from 'react-redux'
         <Route path="/" element={<Home />}/>
         <Route path="/sign-in" element={<SignIn />}/>
         <Route path="/profile" element={ isAuth ? <Profile /> : <Navigate replace to="/sign-in" /> } />
-          {/* // { isAuth ? <Route path='/profile' element={<Profile />} /> : <Route path="/sign-in" element={<SignIn />}/> } */}
-        <Route path='*' />
+        <Route path='*' element={<Navigate replace to="/" />} />
       </Routes>
     )
 }
